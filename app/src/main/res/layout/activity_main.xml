@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:text="三种数据库对比" />
+
+    <RadioGroup
+        android:id="@+id/radio_g"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_greenDao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="GreenDao" />
+
+        <RadioButton
+            android:id="@+id/rb_litePal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LitePal" />
+
+        <RadioButton
+            android:id="@+id/rb_realm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realm" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_g"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="增" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="改" />
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="查" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/check_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="根据id查" />
+
+    <Button
+        android:id="@+id/deleteAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/check_id"
+        android:layout_centerHorizontal="true"
+        android:text="删除全部" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteAll">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </ScrollView>
+
+</RelativeLayout>
